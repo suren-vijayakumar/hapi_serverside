@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Weekend 5 Angular</title>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+</head>
+<body>
+<div class="container" ng-controller="NiceController">
+    <button ng-click="getStuff()" class="btn btn-info get">Get Stuff</button>
+
+    <div class="col-md-4">
+        <form id="taskForm" method="post">
+            <div>
+                <label for="text">Stuff:</label>
+                <input type="text" ng-model="stuff.text" name="text" id="text" placeholder="Write Something"/>
+                <input type="submit" class="btn btn-info post" ng-click="createStuff()" value="Create Stuff"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div ng-repeat="stuff in metaStuff" class='task well col-md-3'>
+            <p ng-class="{completed: stuff.complete}" ng-click="(completeTask(stuff._id, stuff.text, stuff.complete))" class="lead">{{ stuff.text }}</p>
+            <button ng-click="deleteStuff(stuff._id)" class='btn btn-danger delete'>X</button>
+        </div>
+    </div>
+</div>
+
+<div id="someContainer" class="container">
+
+</div>
+
+
+
+<!--SCRIPTS-->
+<script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+</body>
+</html>

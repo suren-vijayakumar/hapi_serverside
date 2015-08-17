@@ -1,0 +1,29 @@
+{
+  "name": "weekend5angular-hapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "angular": "^1.4.4",
+    "body-parser": "^1.13.3",
+    "bootstrap": "^3.3.5",
+    "good": "^6.3.0",
+    "good-console": "^5.0.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "hapi": "^9.0.1",
+    "hapi-mongodb": "^3.0.0",
+    "inert": "^3.0.1",
+    "mongoose": "^4.1.2",
+    "node": "^0.0.0",
+    "path": "^0.11.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Suren",
+  "license": "ISC"
+}
